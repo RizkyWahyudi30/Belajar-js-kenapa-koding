@@ -1,0 +1,11 @@
+Ada 2 Jenis tipe data :
+
+1. Tipe data Primitif, yaitu :
+String, number, boolean, undefined, null, symbol, bigInt
+
+2. Tipe data reference, yaitu :
+Object, array, function
+
+Perbedaan tipe data primitif dan reference :
+1. penyimpanan : primitif di stack memori, sedangkan reference di heap memori
+2. 
