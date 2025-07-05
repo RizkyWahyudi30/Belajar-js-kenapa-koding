@@ -20,7 +20,7 @@
  console.log(str4[4]); // "J"
  console.log(str4[7]); // "a"
  
- // Property dan Method di string
+ // == Property dan Method di string ==
  // 1. Length: menghitung panjang String
  let examStr = "Javascript is Fun";
  console.log(examStr.length);
@@ -38,7 +38,7 @@
  
  
  
- // Manipulasi string
+ // == Manipulasi string ==
  
  // Menggabungkan string, dengan cara :
  // 1. Menggunakan method concat()
@@ -56,7 +56,7 @@
  console.log(wLiteral);
  
  
- // Mengambil bagian dari string berdasarkan indeks
+ // == Mengambil bagian dari string berdasarkan indeks ==
  let testStr = "Hello everyone, im Kiru";
  // 1. Menggunakan slice()
  let wSlice = testStr.slice(4, 7);
@@ -67,12 +67,12 @@
  console.log(wSubStr);
  
  
- // Mengganti bagian string dengan string baru
+ // == Mengganti bagian string dengan string baru ==
  let conStr = testStr.replace("Kiru", "Yuuta");
  console.log(conStr);
  
  
- // Membagi sebuah string menjadi array berdasarkan separator yang diberikan
+ // == Membagi sebuah string menjadi array berdasarkan separator yang diberikan ==
  let conSplit = testStr.split(" ");
  console.log(conSplit);
  // kita juga bisa atur limit array nya
@@ -83,3 +83,22 @@
  let arrJoin = ["Banana", "Pineaplle", "Star Fruit", "Apel"];
  let conJoin = arrJoin.join();
  console.log(conJoin);
+ 
+ 
+ // == Pencarian dalam String ==
+ // 1. indexOf(): memgembalikkan index dari kemunculan pertama substring dalam string, atau -1 jika tidak ditemukan
+ let testStr2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus similique facere ea temporibus iusto dolorum perferendis, repudiandae suscipit eligendi. Ratione?";
+ let cekIndex = testStr2.indexOf("dolor");
+ console.log(cekIndex); // 
+ // jika tidak ada, maka akan -1 :
+ let cekIndex2 = testStr2.indexOf("Dolor"); // huruf D nya besar
+ console.log(cekIndex2); // maka akan -1
+ 
+ // 2. lastIndexOf(): memgembalikkan index dari kemunculan terakhir substring dalam string
+ let testLastIndex = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus similique facere ea temporibus iusto dolorum perferendis, repudiandae suscipit eligendi. Ratione?"
+ let lastIndex = testLastIndex.lastIndexOf("dolor");
+ console.log(lastIndex);
+ 
+ // 3. includes(): mengecek apakah ada substring tersebut dalam string dan akan mengembalikkan nilai true or false
+ let cekInc = testLastIndex.includes("dolor");
+ console.log(cekInc);
