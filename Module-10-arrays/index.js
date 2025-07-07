@@ -67,3 +67,44 @@
  // --> bisa juga dengan minus 
  console.log(arrAnimals.slice(-3));
  console.log(arrAnimals.slice(2, -1));
+ 
+ // 8. .includes(): mengecek apakah elemen ada di dalam suatu array
+ // menghasilkan true or false
+ console.log(arrAnimals.includes("Kudanil")); // true
+ // -> bagaimana jika kita menulis K nya dengan huruf kecil? hasiknya akan false
+ console.log(arrAnimals.includes("kudanil"));
+ 
+ // 9. .splice(): menambahkan atau menghapus elemen dari array 
+ let negara = ["Indonesia", "Malaysia", "Singapura", "China", "Korea", "Rusia", "Arab", "Jepang"];
+ // --> ada beberapa syntax dasar dari penggunaan method slice
+ /**
+  * 
+  * splice(start); // 1
+  * splice(start, deleteCount); // 2
+  * splice(start, deleteCount, item1); // 3
+  * splice(start, deleteCount, item1, item2); // 4
+  * splice(start, deleteCount, item1, item2, ...., itemN); // 5
+  * 
+  */
+  // Menghapus:
+ negara.splice(1, 1);
+ console.log(negara);
+ // Menambahkan: 
+ negara.splice(1, 0, "India"); // ini jiha bisa lebih dari 1 elemen, bisa 2, 3 atau seterusnya.. seperti diatas
+ console.log(negara);
+ // Mengganti dan menghapus:
+ negara.splice(5, 2, "Palestina", "Iran"); // --> mulai dari indeks 5, nenghapus 2 item, dan sebagai gantinya 2 item
+ console.log(negara);
+
+// 10. .indexOf(): mencari indeks dari elemen tertentu 
+let junkfood = ["mie goreng", "mie ayam", "nasi goreng", "burger", "hotdog", "pizza", "kebab"];
+console.log(junkfood.indexOf("nasi goreng")); // indeks ke 2
+
+
+//= Kita juga bisa membuat Multidimensional Array atau lebih sering dikenal Nested Array 
+let num = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+];
+console.log(num);
