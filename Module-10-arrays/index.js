@@ -107,4 +107,5 @@ let num = [
   [4,5,6],
   [7,8,9]
 ];
-console.log(num);
+console.log(num); // ini jika kita ingin mengakses semua nya
+console.log(num[2][1]); // ambil indeks ke array kedua --> [7,8,9] dan lanjut spesifik ke indeks 1 --> 5
