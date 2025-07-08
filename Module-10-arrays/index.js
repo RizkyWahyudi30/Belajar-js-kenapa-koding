@@ -100,6 +100,16 @@
 let junkfood = ["mie goreng", "mie ayam", "nasi goreng", "burger", "hotdog", "pizza", "kebab"];
 console.log(junkfood.indexOf("nasi goreng")); // indeks ke 2
 
+// 11. .join(); menggabungkan array menjadi string 
+// .join(separator);
+const arr = ["Pisang", "Mangga", "Semangka", "Melon", "Durian"]; 
+
+// tanpa separator:
+console.log(arr.join()); 
+// dengan string kosong:
+console.log(arr.join("")); 
+// dengan strip:
+console.log(arr.join("-"));
 
 //= Kita juga bisa membuat Multidimensional Array atau lebih sering dikenal Nested Array 
 let num = [
