@@ -76,7 +76,7 @@ console.log(yearNow); // 2025
 
 // bulan sekarang 
 let month = now.getMonth();
-console.log(month); // 2006
+console.log(month); // 6 
 
 // hari 
 let days = now.getDay();
