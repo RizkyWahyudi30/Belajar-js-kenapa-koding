@@ -12,13 +12,14 @@
    nama: "Rizky Wahyudi",
    umur: 17,
    status: "Pelajar SMK",
-   isActive: true
- }
+   isActive: true,
+   "jurusan kesukaan": "Komputer", // ini contoh untuk bracket notation
+ };
  // Cara aksss 
  console.log(examObj); // ini untuk memanggil semuanya
  console.log(examObj.nama); // ngambil value dari key->nama 
  // bisa juga dengan kurung bracket / notation bracket
- console.log(examObj["status"]);
+ console.log(examObj["jurusan kesukaan"]);
  //-->Notation bracket berguna jika nama properti memgandung spasi atau kalimat khusus
  
  // Kita juga bisa membuatnya dengan Constructor -> new Object()
@@ -52,3 +53,14 @@
  
  console.log(nama);
  console.log(umur);
+ 
+ //= Nested Object 
+ let nestedObj = {
+   username: "Kiryuu Devistix",
+   hobby: {
+     first: "Coding",
+     Second: "Running",
+     Third: "Armwrestling",
+   },
+ };
+ console.log(nestedObj)
