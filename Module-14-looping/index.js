@@ -37,4 +37,34 @@
    *  Selalu menjalankan kode setidaknya satu kali, kareka kondisi diperiksa setelag blok kode dieksekusi.
    * 
    */
-   
+  let i = 1; 
+  
+  do {
+    // console.log(`ini iterasi i ke: ${i}`)
+    i++;
+  } while (i <= 10);
+  
+  
+  
+  // Ada dua jenis lagi -> For-in dan For-of 
+  // =======================================
+  
+  // For - in: untuk mengiterasi properti objek atau indeks array 
+  let object = {
+    name: "Rizky Wahyudi",
+    older: 17,
+    isActive: true
+  }
+  for (let objProps in object){
+    // console.log(`${objProps}: ${object[objProps]}`);
+    
+    // ${objProps} --> ini nge looping key dari object nya 
+    // ${object[objProps]} --> ini nge looping value dari object 
+  }
+  
+  
+  // For - of: untuk mengiterasi elemen dalam iterable seperti array atau string
+  let arr = [1,12,23,34,45];
+  for (let arrElem of arr){
+    console.log(arrElem);
+  }
