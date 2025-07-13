@@ -103,3 +103,31 @@ let cekAnagram = (stringA, stringB) => {
   return formatString(stringA) === formatString(stringB);
 };
 console.log(cekAnagram("listen", "silent")); // true
+
+// 16. Dari kalimat "Aku suka belajar JavaScript", tampilkan setiap kata secara terbalik satu per satu, tapi tetap dalam urutan yang sama
+
+let balikKalimat = (str) => {
+  return str
+    .split(" ")
+    .map((kata) => kata.split("").reverse().join(""))
+    .join(" ");
+  // method split pertama untuk memisahkan kalimat menjadi array kata, kemudian split kedua memisahkan kata menjadi huruf huruf
+  // join pertama untuk menggabungkan huruf hurufnya, kemudian split kedua menggabungkan nya dengan spasi
+};
+let kalimat2 = balikKalimat("Aku suka belajar JavaScript");
+console.log(kalimat2);
+
+// 17. Diberikan sebuah string, ubah semua huruf di posisi ganjil menjadi huruf besar, dan huruf di posisi genap menjadi kecil.
+let periksa = (str) => {
+  let hasil = "";
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 != 0) {
+      hasil += str[i].toUpperCase();
+    } else {
+      hasil += str[i].toLowerCase();
+    }
+  }
+  return hasil;
+};
+let hurufBesar = periksa("javascript");
+console.log(hurufBesar);
