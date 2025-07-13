@@ -94,7 +94,62 @@
 // 1. removeChild(childNode): menghapus elemen anak
 // 2. remove(): menghapus elemen secara langsung
 
-let newDiv = document.createElement("div");
-newDiv.textContent = "Ini latihannya"; // ini script nya
-// kita ingin insert dia sebagai anak, jadi akan dibawah tag h1 nya
-document.body.appendChild(newDiv); // ini muncul dibawahnya
+// menambah elemen
+// let newDiv = document.createElement("div");
+// newDiv.textContent = "Ini latihannya"; // ini script nya
+// // kita ingin insert dia sebagai anak, jadi akan dibawah tag h1 nya
+// document.body.appendChild(newDiv); // ini muncul dibawahnya
+// // kita bisa append sebelum title
+// let title = document.getElementById("title");
+// document.body.insertBefore(newDiv, title);
+// // nyoba insertBefore (jadi tidak hanya bisa di body saja)
+// let newLi = document.createElement("li");
+// newLi.textContent = "item dari script li";
+// let parents = document.getElementById("listUl");
+// let itemDua = document.getElementById("item2");
+// // parents.appendChild(newLi);
+// parents.insertBefore(newLi, itemDua);
+
+// menghapus elemen
+// ini dengan removeChild()
+// let hapusItem = document.getElementById("test");
+// document.body.removeChild(hapusItem);
+// // bisa juga menghapus elemen di li
+// parents.removeChild(itemDua);
+// // dengan remove()
+// title.remove(); // bisa menghapusnya secara langsung
+// jika ingin menghapus body nya :v
+// document.body.remove();
+
+// ============================================================
+// DOM Traversal
+// proses menjelajahi node di DOM tree untuk menemukan elemen tertenu. Anda dapat berpindah ke elemen anak, orang tua, atau saudara menggunakan prperti dan metode
+
+// Properti DOM Traversal :
+// 1. parentNode: mendapatkan elemen orang tua
+// 2. childNodes: mendapatkan nodelist dari semua anak elemen
+// 3. firstChild/lastChild: mendapatkan anak pertama/terakhir
+// 4. nextSibling/previousSibling: mendapatkan elemen saudara berikutnya/sebelemnya
+
+// cari tau asal elemen li dengan id pen1
+let listItemPenjelasan = document.getElementById("pen1");
+let item2 = document.getElementById("pen2");
+console.log(listItemPenjelasan.parentNode);
+console.log(listItemPenjelasan.parentElement);
+// cari tau children dari list item
+let listItem = document.getElementById("list-pen");
+console.log(listItem.childNodes); // tidak disarankan
+console.log(listItem.children);
+// kenapa ada output text? -> output text itu bis diartikan sebagai spasi, makanya dihitung juga
+
+// kita juga bisa dapetin anakan pertama/terakhirnya
+// console.log(listItem.firstChild); // ini outputnya akan text
+// console.log(listItem.firstElementChild); // akan mengarah langsung ke item nya
+// console.log(listItem.lastChild);
+// console.log(listItem.lastElementChild);
+// dan ada juga next elemen, kurang lebih sama sistem nya kayak diatas
+console.log(listItem.nextSibling); // text
+console.log(listItem.nextElementSibling);
+// sebelumnya
+console.log(item2.previousSibling);
+console.log(item2.previousElementSibling);
