@@ -131,3 +131,20 @@ let periksa = (str) => {
 };
 let hurufBesar = periksa("javascript");
 console.log(hurufBesar);
+
+// 18. Hitung jumlah kemunculan setiap huruf dalam sebuah string, dan tampilkan dalam bentuk objek.
+let jumlahHuruf = (str) => {
+  const hasilHuruf = {};
+  let konversiStr = str.toLowerCase(); // konversi ke string
+
+  for (let i = 0; i < konversiStr.length; i++) {
+    const huruf = konversiStr[i];
+    if (/[a-z]/.test(huruf)) {
+      hasilHuruf[huruf] = (hasilHuruf[huruf] || 0) + 1;
+    }
+  }
+
+  return hasilHuruf;
+};
+let huruf = jumlahHuruf("halo");
+console.log(huruf);
