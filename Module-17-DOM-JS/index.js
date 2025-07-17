@@ -132,14 +132,14 @@
 // 4. nextSibling/previousSibling: mendapatkan elemen saudara berikutnya/sebelemnya
 
 // cari tau asal elemen li dengan id pen1
-let listItemPenjelasan = document.getElementById("pen1");
-let item2 = document.getElementById("pen2");
-console.log(listItemPenjelasan.parentNode);
-console.log(listItemPenjelasan.parentElement);
-// cari tau children dari list item
-let listItem = document.getElementById("list-pen");
-console.log(listItem.childNodes); // tidak disarankan
-console.log(listItem.children);
+// let listItemPenjelasan = document.getElementById("pen1");
+// let item2 = document.getElementById("pen2");
+// console.log(listItemPenjelasan.parentNode);
+// console.log(listItemPenjelasan.parentElement);
+// // cari tau children dari list item
+// let listItem = document.getElementById("list-pen");
+// console.log(listItem.childNodes); // tidak disarankan
+// console.log(listItem.children);
 // kenapa ada output text? -> output text itu bis diartikan sebagai spasi, makanya dihitung juga
 
 // kita juga bisa dapetin anakan pertama/terakhirnya
@@ -148,8 +148,63 @@ console.log(listItem.children);
 // console.log(listItem.lastChild);
 // console.log(listItem.lastElementChild);
 // dan ada juga next elemen, kurang lebih sama sistem nya kayak diatas
-console.log(listItem.nextSibling); // text
-console.log(listItem.nextElementSibling);
-// sebelumnya
-console.log(item2.previousSibling);
-console.log(item2.previousElementSibling);
+// console.log(listItem.nextSibling); // text
+// console.log(listItem.nextElementSibling);
+// // sebelumnya
+// console.log(item2.previousSibling);
+// console.log(item2.previousElementSibling);
+
+// ============================================================
+// EVENT HANDLING
+// yaitu konsep untuk menangkap dan merespons interaksi pengguna
+
+// selanjutnya ada yang namanya :
+
+// Event Listener: untuk menangkap event dan menjalankan fungsi tertentu ketika event tersebut terjadi
+// cara menambahkannya :
+// 1. {/* <button onClick="alert {'Button clicked'}""></button> */} --> ini inline event handling
+// 2. const button = document.querySelector("button"); --> javascript
+// button.addEventListener("click", () => {
+//   alert("Button clicked");
+// });
+
+// Jenis jenis Event yaang umum digunakan:
+// Mouse Events:
+// 1. click: ketika elemen diklik
+// 2. dblclick: ketika elemen diklik dua kali
+// 3. mouseover: ketika kursor mouse berada di atas elemen
+// 4. mouseout: ketika mouse meninggalkan elemen
+// ---------------------------------------------------------
+// Keyboard Events:
+// 1. keydown: ketika tombol ditekan
+// 2. keyup: ketika tombol dilepaskan
+// 3. keypress: ketika tombol ditekan dan dilepaskan
+// ---------------------------------------------------------
+// Form Events:
+// 1. submit: ketika form disubmit
+// 2. change: ketika nilai input berubah
+// 3. focus: ketika elemen form mendapatkan fokus
+// 4. blur: ketika elemen input kehilangan fokus
+// ---------------------------------------------------------
+// Window Events:
+// 1. load: ketika halaman selesai dim
+// 2. resize: ketika ukuran jendela diubah
+// 3. scroll: ketika halaman di-scroll
+
+// praktek:
+const button = document.getElementById("button-submit");
+button.addEventListener("click", () => {
+  alert("Button submit");
+});
+
+const textEv = document.getElementById("text-event");
+function getClick() {
+  textEv.style.backgroundColor = "red";
+}
+textEv.addEventListener("mouseover", () => {
+  textEv.style.color = "yellow";
+});
+
+textEv.addEventListener("mouseout", () => {
+  textEv.style.color = "blue";
+});
