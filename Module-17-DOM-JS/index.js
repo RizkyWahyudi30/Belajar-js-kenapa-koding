@@ -1,6 +1,7 @@
 // DOM
 // DOM adalah representasi struktur dokumen HTML atau XML dalam bentuk tree yang memunngkinkan program untuk mengakses dan memanipulasi konten, struktur dan gaya halaman web secara dinamis
 
+// --> MATERI DOM STRUCTURE
 // ============================================================
 // di DOM ada dua penjelasan, yaitu:
 // 1. Node: setiap elemen dalam tree DOM disebur node. Ada beberapa jenis node, ada elemen, teks, atribut
@@ -12,6 +13,7 @@
 // listDoc[1].style.color = "red";
 // listDoc[2].style.color = "yellow";
 
+// -> DOM ACCESS
 // ============================================================
 // Mengakses DOM
 // javascript menyediakan beberapa metode untuk mengakses elemen di DOM:
@@ -44,6 +46,7 @@
 // getElementsByTagName -> apabila terjadi perubahan pada grup, akan langsung berubah juga -> tidak bisa ngeselect seperti query
 // querySelectorAll -> ini static -> bisa nge select berdasarkan class atau id
 
+// --> DOM MANIPULATION ELEMENT
 // ============================================================
 // Memanipulasi Elemen
 // Kita bisa mengubah konten, atribut, dan gaya elemen tersebut
@@ -58,6 +61,7 @@
 // kita bisa ngubah isi konten nya
 // loremText.textContent = "kalimat kalimat lorem sit dengan textContent";
 // loremText.innerHTML = "dengan inner HTML";
+//
 
 // jika kita mengambil yang ada anakannya atau yang ada di dalam div
 // inner html
@@ -83,6 +87,7 @@
 // console.log(setStyle);
 // setStyle[2].style.backgroundColor = "red";
 
+// --> ADD / DELETE ELEMENT
 // ============================================================
 // Menambahkan dan Menghapus Elemen DOM:
 // untuk menambahkan elemen baru ke DOM, bisa menggunakan:
@@ -121,6 +126,7 @@
 // jika ingin menghapus body nya :v
 // document.body.remove();
 
+// --> DOM TRAVERSAL
 // ============================================================
 // DOM Traversal
 // proses menjelajahi node di DOM tree untuk menemukan elemen tertenu. Anda dapat berpindah ke elemen anak, orang tua, atau saudara menggunakan prperti dan metode
@@ -154,6 +160,7 @@
 // console.log(item2.previousSibling);
 // console.log(item2.previousElementSibling);
 
+// --> EVENT HANDLING
 // ============================================================
 // EVENT HANDLING
 // yaitu konsep untuk menangkap dan merespons interaksi pengguna
@@ -208,3 +215,11 @@ textEv.addEventListener("mouseover", () => {
 textEv.addEventListener("mouseout", () => {
   textEv.style.color = "blue";
 });
+
+function toUpSize() {
+  textEv.style.fontSize = "30px";
+}
+
+function returnSize() {
+  textEv.style.fontSize = "16px";
+}

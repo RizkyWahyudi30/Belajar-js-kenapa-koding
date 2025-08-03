@@ -139,7 +139,7 @@ let jumlahHuruf = (str) => {
 
   for (let i = 0; i < konversiStr.length; i++) {
     const huruf = konversiStr[i];
-    if (/[a-z]/.test(huruf)) {
+    if (/[  a-z]/.test(huruf)) {
       hasilHuruf[huruf] = (hasilHuruf[huruf] || 0) + 1;
     }
   }
@@ -148,3 +148,15 @@ let jumlahHuruf = (str) => {
 };
 let huruf = jumlahHuruf("halo");
 console.log(huruf);
+
+// 19. Ubah sebuah kalimat menjadi judul (setiap kata diawali huruf kapital).
+let kataBesar = (str) => {
+  return str
+    .split(" ")
+    .map((kata) => kata.charAt(0).toUpperCase() + kata.slice(1).toLowerCase())
+    .join(" ");
+};
+let kalimat = kataBesar("belajar javascript itu seru");
+console.log(kalimat); // Belajar Javascript Itu Seru
+
+// 20. 
