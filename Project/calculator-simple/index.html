@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project simple calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator Sederhana</h1>
+      <p>Menghitung angka dengan berbagai jenis</p>
+
+      <div class="main-content">
+        <fieldset>
+          <legend>Calculator Simple</legend>
+          <br />
+
+          <label for="angka-satu">Angka pertama:</label>
+          <input
+            type="number"
+            name="numberOne"
+            id="numberOne"
+            placeholder="Masukkan angka 1"
+          />
+          <br />
+
+          <label for="angka-dua">Angka kedua:</label>
+          <input
+            type="number"
+            name="numberTwo"
+            id="numberTwo"
+            placeholder="Masukkan angka kedua"
+          />
+          <br />
+          <label for="operator">Pilih operator:</label>
+          <select name="operator" id="operator">
+            <optgroup label="operator">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </optgroup>
+          </select>
+
+          <br />
+          <br />
+
+          <button type="submit" id="hitungAngka" onclick="countNumber()">
+            Hitung
+          </button>
+          <br />
+          <br />
+
+          <div class="result">
+            <p id="result"></p>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
