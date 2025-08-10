@@ -29,3 +29,10 @@ function countNumber() {
     ).innerText = `Hasil angka pertama: ${firstNumber} dan angka kedua: ${secondNumber}. Dibagi = ${result}`;
   }
 }
+
+function resetCalc() {
+  document.getElementById("numberOne").value = "";
+  document.getElementById("numberTwo").value = "";
+  document.getElementById("operator").selectedIndex = "0";
+  document.getElementById("result").innerText = "";
+}
