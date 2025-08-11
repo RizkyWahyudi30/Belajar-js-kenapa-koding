@@ -1,0 +1,23 @@
+.main-contain {
+  display: grid;
+  grid-template-columns: repeat(4, 40px); /* 4 kolom, lebar tiap kolom 80px */
+  gap: 10px; /* jarak antar tombol */
+  justify-content: left; /* posisikan di tengah */
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.main-contain button {
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.main-contain button:hover {
+  background-color: #ddd;
+}

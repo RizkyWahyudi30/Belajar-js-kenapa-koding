@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Calculator Simple 2 | Go Backend Dev</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Calculator 2</h1>
+      <p>
+        im building Calculator part 2 because i want try if each button filled
+        number
+      </p>
+
+      <div class="main-contain">
+        <!-- Baris 1 -->
+        <button onclick="funcCalc('7')">7</button>
+        <button onclick="funcCalc('8')">8</button>
+        <button onclick="funcCalc('9')">9</button>
+        <button onclick="funcCalc('/')">÷</button>
+
+        <!-- Baris 2 -->
+        <button onclick="funcCalc('4')">4</button>
+        <button onclick="funcCalc('5')">5</button>
+        <button onclick="funcCalc('6')">6</button>
+        <button onclick="funcCalc('*')">×</button>
+
+        <!-- Baris 3 -->
+        <button onclick="funcCalc('1')">1</button>
+        <button onclick="funcCalc('2')">2</button>
+        <button onclick="funcCalc('3')">3</button>
+        <button onclick="funcCalc('-')">−</button>
+
+        <!-- Baris 4 -->
+        <button onclick="funcCalc('0')">0</button>
+        <button onclick="funcCalc('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="funcCalc('+')">+</button>
+
+        <!-- Baris 5 (opsional, tombol clear) -->
+        <button onclick="clearCalc()">C</button>
+      </div>
+      <br />
+
+      <div class="resultCalc">
+        <p id="resultCalc"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
