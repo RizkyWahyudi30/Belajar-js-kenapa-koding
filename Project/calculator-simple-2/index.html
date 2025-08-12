@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Calculator Simple 2 | Go Backend Dev</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -39,7 +43,15 @@
         <button onclick="calculate()">=</button>
         <button onclick="funcCalc('+')">+</button>
 
-        <!-- Baris 5 (opsional, tombol clear) -->
+        <!-- baris 5 -->
+        <button onclick="funcCalc('(')">(</button>
+        <button onclick="funcCalc(')')">)</button>
+        <button onclick="funcCalc('^')">^</button>
+        <button onclick="deleteLast()">
+          <i class="fa-solid fa-square-xmark"></i>
+        </button>
+
+        <!-- Baris 6 (opsional, tombol clear) -->
         <button onclick="clearCalc()">C</button>
       </div>
       <br />

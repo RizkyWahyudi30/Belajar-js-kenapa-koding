@@ -1,7 +1,12 @@
 let userInput = ""; // nyimpen input angka / operator
 
 function funcCalc(value) {
-  userInput += value;
+  // konversi jika user memilih ^ menjadi **
+  if (value === "^") {
+    userInput += "**";
+  } else {
+    userInput += value;
+  }
   document.getElementById("resultCalc").innerText = userInput;
 }
 
@@ -19,4 +24,9 @@ function calculate() {
 function clearCalc() {
   userInput = "";
   document.getElementById("resultCalc").innerText = "";
+}
+
+function deleteLast() {
+  userInput = userInput.slice(0, -1);
+  document.getElementById("resultCalc").innerText = userInput;
 }
