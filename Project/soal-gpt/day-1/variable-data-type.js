@@ -16,10 +16,11 @@ function inputUser() {
       document.getElementById("hobbyUser").value = "";
     }
 
-    document.getElementById("resultUser").innerText = `
+    document.getElementById("resultUser").innerHTML = `
     Nama: ${name}, 
     Umur: ${age}, 
-    Hobi: ${listHobbies.join(", ")}
+    Hobi: 
+    ${listHobbies.map((h, i) => `${i + 1}. ${h}`).join("\n")}
     `;
   }
 }
