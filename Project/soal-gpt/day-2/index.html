@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Operator Javascript | Learning day 2</title>
+  </head>
+  <body>
+    <!-- calculator -->
+    <h1>Calculator</h1>
+    <p>Create tools calculate number for bussiness and my learning project</p>
+    <input id="resultCalc" readonly />
+    <div id="numberCal">
+      <!-- colomn 1 -->
+      <button onclick="topPersent()">%</button>
+      <button onclick="deleteLastInput()">CE</button>
+      <button onclick="deleteAll()">C</button>
+      <button onclick="calcNumUser()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M14 22v-2h4v2zm-6 0v-2h4v2zM4 10H2V6h2zm0 6H2v-4h2zm2 6H2v-4h2v2h2zm5.9-8.5l2.1-2.1l2.1 2.1l1.4-1.4l-2.1-2.1l2.1-2.1l-1.4-1.4L14 8.6l-2.1-2.1l-1.4 1.4l2.1 2.1l-2.1 2.1zM6 18V2h16v16z"
+          />
+        </svg>
+      </button>
+
+      <!-- colomn 2 -->
+      <button onclick="calcNumUser('7')">7</button>
+      <button onclick="calcNumUser('8')">8</button>
+      <button onclick="calcNumUser('9')">9</button>
+      <button onclick="calcNumUser('/')">÷</button>
+
+      <!-- colomn 3 -->
+      <button onclick="calcNumUser('4')">4</button>
+      <button onclick="calcNumUser('5')">5</button>
+      <button onclick="calcNumUser('6')">6</button>
+      <button onclick="calcNumUser('*')">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="512"
+          height="512"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="currentColor"
+            d="m289.94 256l95-95A24 24 0 0 0 351 127l-95 95l-95-95a24 24 0 0 0-34 34l95 95l-95 95a24 24 0 1 0 34 34l95-95l95 95a24 24 0 0 0 34-34Z"
+          />
+        </svg>
+      </button>
+      <button onclick="calcNumUser()"></button>
+      <button onclick="calcNumUser()"></button>
+      <button onclick="calcNumUser()"></button>
+      <button onclick="calcNumUser()"></button>
+      <button onclick="calcNumUser()"></button>
+    </div>
+
+    <script src="operator.js"></script>
+  </body>
+</html>

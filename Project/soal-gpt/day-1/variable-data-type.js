@@ -46,6 +46,7 @@ function dataPrice() {
   if (isNaN(data)) {
     alert("Please enter a valid number");
   } else {
+    // for check if in array found 0 dummy
     if (price.length === 1 && price[0] === 0) {
       price = [];
     }
